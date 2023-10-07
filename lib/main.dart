@@ -1,15 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:greenhub/screens/home_screen.dart';
+import 'package:greenhub/screens/community_screen.dart';
+import 'package:greenhub/screens/location_screen.dart';
+import 'package:greenhub/screens/challenges_screen.dart';
 
-void main() => runApp(GREENHUB());
+import 'package:greenhub/routes/pantallaInicio.dart';
+
+void main() {
+  runApp(GREENHUB());
+}
 
 class GREENHUB extends StatelessWidget {
-  const GREENHUB({super.key});
+  const GREENHUB({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "GREENHUB",
-      home: Inicio(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => PantallaInicio(),
+        '/inicio': (context) => Inicio(),
+        '/community': (context) => CommunityWidget(),
+        '/location': (context) => LocationWidget(),
+        '/challenges': (context) => ChallengesWidget(),
+      },
     );
   }
 }
@@ -22,14 +38,56 @@ class Inicio extends StatefulWidget {
 }
 
 class _InicioState extends State<Inicio> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _widgetOptions = <Widget>[
+    HomeWidget(),
+    CommunityWidget(),
+    LocationWidget(),
+    ChallengesWidget(),
+  ];
+
+  void _onItem(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("INICIO GREENHUB"),
+        title:
+            const Text("Buenas Noches!", style: TextStyle(color: Colors.green)),
+        backgroundColor: Colors.white,
       ),
       body: Center(
-        child: Text("Buenas nochesssssssssss"),
+        child: _widgetOptions.elementAt(
+            _selectedIndex), //Muestra la pantalla del wigget seleccionado
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Inicio',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group),
+            label: 'Comunidad',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.location_on),
+            label: 'Localidad',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: 'Desafios',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.grey,
+        onTap: _onItem,
       ),
     );
   }
