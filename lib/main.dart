@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:greenhub/routes/loginScreen.dart';
 
 import 'package:greenhub/screens/home_screen.dart';
 import 'package:greenhub/screens/community_screen.dart';
 import 'package:greenhub/screens/location_screen.dart';
-import 'package:greenhub/screens/challenges_screen.dart';
 
 import 'package:greenhub/routes/pantallaInicio.dart';
 import 'package:greenhub/routes/primeraPantalla.dart';
 import 'package:greenhub/routes/segundaPantalla.dart';
 import 'package:greenhub/routes/terceraPantalla.dart';
 import 'package:greenhub/routes/cuartaPantalla.dart';
+import 'package:greenhub/routes/loginScreen.dart';
 
 void main() {
   runApp(GREENHUB());
@@ -30,10 +31,10 @@ class GREENHUB extends StatelessWidget {
         '/dos': (context) => segundaPantalla(),
         '/tres': (context) => terceraPantalla(),
         '/cuatro': (context) => cuartaPantalla(),
+        '/login': (context) => loginScreen(),
         '/inicio': (context) => Inicio(),
         '/community': (context) => CommunityWidget(),
         '/location': (context) => LocationWidget(),
-        '/challenges': (context) => ChallengesWidget(),
       },
     );
   }
@@ -51,9 +52,8 @@ class _InicioState extends State<Inicio> {
 
   final List<Widget> _widgetOptions = <Widget>[
     HomeWidget(),
-    CommunityWidget(),
     LocationWidget(),
-    ChallengesWidget(),
+    CommunityWidget(),
   ];
 
   void _onItem(int index) {
@@ -81,20 +81,16 @@ class _InicioState extends State<Inicio> {
             label: 'Inicio',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group),
-            label: 'Comunidad',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
             label: 'Localidad',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Desafios',
+            icon: Icon(Icons.group),
+            label: 'Comunidad',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.green,
+        selectedItemColor: Color(0xFF2DDA93),
         unselectedItemColor: Colors.grey,
         onTap: _onItem,
       ),
