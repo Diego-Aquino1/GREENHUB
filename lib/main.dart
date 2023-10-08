@@ -7,6 +7,9 @@ import 'package:greenhub/screens/challenges_screen.dart';
 
 import 'package:greenhub/routes/pantallaInicio.dart';
 import 'package:greenhub/routes/primeraPantalla.dart';
+import 'package:greenhub/routes/segundaPantalla.dart';
+import 'package:greenhub/routes/terceraPantalla.dart';
+import 'package:greenhub/routes/cuartaPantalla.dart';
 
 void main() {
   runApp(GREENHUB());
@@ -20,10 +23,13 @@ class GREENHUB extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "GREENHUB",
-      initialRoute: '/first',
+      initialRoute: '/index',
       routes: {
         '/index': (context) => PantallaInicio(),
-        '/first': (context) => primeraPantalla(),
+        '/uno': (context) => primeraPantalla(),
+        '/dos': (context) => segundaPantalla(),
+        '/tres': (context) => terceraPantalla(),
+        '/cuatro': (context) => cuartaPantalla(),
         '/inicio': (context) => Inicio(),
         '/community': (context) => CommunityWidget(),
         '/location': (context) => LocationWidget(),

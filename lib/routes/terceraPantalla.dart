@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class primeraPantalla extends StatelessWidget {
+class terceraPantalla extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +11,7 @@ class primeraPantalla extends StatelessWidget {
               height: 50,
             ),
             Image.asset(
-              "assets/Slide1.png",
+              "assets/Slide3.png",
               width: 288,
               height: 399,
             ),
@@ -22,7 +22,7 @@ class primeraPantalla extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Monitorea tu aire, ¡respira!",
+                    "Reduce tu Huella de Carbono",
                     style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
@@ -34,7 +34,7 @@ class primeraPantalla extends StatelessWidget {
                     height: 30,
                   ),
                   Text(
-                    "Tendrás una perspectiva ambiental del entorno donde vives.",
+                    "Postea diferentes situaciones  de tu día a día. ¡Captura la esencia y comparte experiencias que inspiren a otros!",
                     style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 13,
@@ -50,7 +50,7 @@ class primeraPantalla extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/dos');
+                  Navigator.pushReplacementNamed(context, '/cuatro');
                 },
                 style: ElevatedButton.styleFrom(
                     padding:

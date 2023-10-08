@@ -13,24 +13,28 @@ class PantallaInicio extends StatelessWidget {
           ),
           Image.asset(
             'assets/inicio.png',
-            width: 250,
-            height: 250,
+            width: 290,
+            height: 230,
           ),
-          Expanded(
+          const Expanded(
             child: SizedBox(),
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacementNamed(context, '/first');
+                Navigator.pushReplacementNamed(context, '/uno');
               },
               style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 130, vertical: 18),
+                  padding: EdgeInsets.symmetric(horizontal: 130, vertical: 17),
                   backgroundColor: Color(0xFF41BA66),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(99))),
               child: const Text(
                 'Empezar',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               )),
           const SizedBox(
             height: 40,

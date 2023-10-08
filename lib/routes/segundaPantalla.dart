@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class primeraPantalla extends StatelessWidget {
+class segundaPantalla extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +11,7 @@ class primeraPantalla extends StatelessWidget {
               height: 50,
             ),
             Image.asset(
-              "assets/Slide1.png",
+              "assets/Slide2.png",
               width: 288,
               height: 399,
             ),
@@ -22,7 +22,7 @@ class primeraPantalla extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Monitorea tu aire, ¡respira!",
+                    "Conoce más acerca de tu comunidad",
                     style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
@@ -50,7 +50,7 @@ class primeraPantalla extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/dos');
+                  Navigator.pushReplacementNamed(context, '/tres');
                 },
                 style: ElevatedButton.styleFrom(
                     padding:
