@@ -21,7 +21,7 @@ class PantallaInicio extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacementNamed(context, '/inicio');
+                Navigator.pushReplacementNamed(context, '/first');
               },
               style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 130, vertical: 18),
@@ -30,7 +30,7 @@ class PantallaInicio extends StatelessWidget {
                       borderRadius: BorderRadius.circular(99))),
               child: const Text(
                 'Empezar',
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 18),
               )),
           const SizedBox(
             height: 40,

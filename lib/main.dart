@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:greenhub/screens/home_screen.dart';
 import 'package:greenhub/screens/community_screen.dart';
 import 'package:greenhub/screens/location_screen.dart';
 import 'package:greenhub/screens/challenges_screen.dart';
 
 import 'package:greenhub/routes/pantallaInicio.dart';
+import 'package:greenhub/routes/primeraPantalla.dart';
 
 void main() {
   runApp(GREENHUB());
@@ -18,9 +20,10 @@ class GREENHUB extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "GREENHUB",
-      initialRoute: '/login',
+      initialRoute: '/first',
       routes: {
-        '/login': (context) => PantallaInicio(),
+        '/index': (context) => PantallaInicio(),
+        '/first': (context) => primeraPantalla(),
         '/inicio': (context) => Inicio(),
         '/community': (context) => CommunityWidget(),
         '/location': (context) => LocationWidget(),
