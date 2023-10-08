@@ -16,7 +16,7 @@ class terceraPantalla extends StatelessWidget {
               height: 399,
             ),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
