@@ -41,7 +41,7 @@ class GREENHUB extends StatelessWidget {
 
 class Inicio extends StatefulWidget {
   const Inicio({super.key});
-
+  
   @override
   State<Inicio> createState() => _InicioState();
 }

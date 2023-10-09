@@ -4,7 +4,7 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 71, 216, 155),
+        backgroundColor: const Color(0xFF37CB8E),
         body: Center(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,15 +37,16 @@ class HomeWidget extends StatelessWidget {
             ),
             Center(
               child: Image.asset(
-                "assets/semillaa.png",
+                "assets/semilla.png",
                 height: 238,
                 width: 240,
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             const Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 50.0,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: 50.0),
               child: Text(
                 "Mi nombre es:",
                 style: TextStyle(
@@ -65,7 +66,7 @@ class HomeWidget extends StatelessWidget {
             Center(
               child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/uno');
+                    Navigator.pushReplacementNamed(context, '/index');
                   },
                   style: ElevatedButton.styleFrom(
                       padding:
@@ -98,7 +99,7 @@ class HomeWidget extends StatelessWidget {
                   ],
                 )),
             const SizedBox(
-              height: 10,
+              height: 30,
             ),
           ],
         )));
