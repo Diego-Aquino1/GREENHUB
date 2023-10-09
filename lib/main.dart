@@ -10,7 +10,6 @@ import 'package:greenhub/routes/primeraPantalla.dart';
 import 'package:greenhub/routes/segundaPantalla.dart';
 import 'package:greenhub/routes/terceraPantalla.dart';
 import 'package:greenhub/routes/cuartaPantalla.dart';
-import 'package:greenhub/routes/loginScreen.dart';
 
 void main() {
   runApp(GREENHUB());
